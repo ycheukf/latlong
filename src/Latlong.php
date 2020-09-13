@@ -30,6 +30,13 @@ class Latlong extends Field
      */
     protected $height = 300;
 
+
+    /**
+     * input class name
+     * @var string
+     */
+    protected $input_class_name = 'search_address';
+
     /**
      * Map Zoom
      *
@@ -91,6 +98,12 @@ class Latlong extends Field
         return $this;
     }
 
+    public function inputClassName($name) {
+        $this->input_class_name = $name;
+
+        return $this;
+    }
+
     /**
      * Set true to automatically get the current position from the browser on page load
      * @param $bool
@@ -116,8 +129,9 @@ class Latlong extends Field
             ->applyScript($this->id);
 
         $variables = [
-            'height'   => $this->height,
-            'provider' => Extension::config('default'),
+            'height'        => $this->height,
+            'provider'      => Extension::config('default'),
+            'input_class_name'    => $this->input_class_name,
         ];
 
         $this->addVariables($variables);
