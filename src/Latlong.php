@@ -69,6 +69,13 @@ class Latlong extends Field
 
         $this->label = $this->formatLabel($arguments);
         $this->id    = $this->formatId($this->column);
+
+        if ($this->value == null) {
+            $this->value = [
+                'lat'   =>  0,
+                'lng'   =>  0
+            ];
+        }
     }
 
     /**
