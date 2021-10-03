@@ -18,6 +18,7 @@ class Google extends AbstractMap
         return <<<EOT
         (function() {
             function init(name) {
+                console.log(name);
                 var lat = $('#{$id['lat']}');
                 var lng = $('#{$id['lng']}');
     
@@ -33,6 +34,7 @@ class Google extends AbstractMap
                 }
     
                 var container = document.getElementById("map_"+name);
+                console.log("map_"+name);
                 var map = new google.maps.Map(container, options);
                 
                 if (navigator.geolocation && {$autoPosition}) {
