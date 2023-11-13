@@ -1,19 +1,19 @@
 {
-    "name": "starvebird/latlong",
+    "name": "ycheukf/latlong",
     "description": "Latitude & Longitude selector",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/laravel-admin-ext/latlong",
+    "homepage": "https://github.com/ycheukf/latlong",
     "license": "MIT",
     "authors": [
         {
-            "name": "z-song",
-            "email": "zosong@126.com"
+            "name": "feng",
+            "email": "fengruzhuo@163.com"
         }
     ],
     "require": {
         "php": ">=7.0.0",
-        "encore/laravel-admin": "~1.6"
+        "encore/laravel-admin": ">1.6"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
